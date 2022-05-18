@@ -1,23 +1,50 @@
 <template>
-  <div>
-    <h1> {{ preco.name }} </h1>  
-    <img :src="preco.image.thumb" alt="">
+  <div v-if="crypto" class="content">
+    {{date}}
+    <h1 class="name"> {{ crypto.name }} ({{crypto.symbol}}) </h1>
+    <img :src="crypto.image.large" alt="">
+    <h1 class="price"> {{ crypto.market_data.current_price.brl.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}} </h1>  
+  </div>
+  <div v-else>
+    <h1>carregando...</h1>
   </div>  
 </template>
 
 <script setup>
-import { computed, onMounted } from '@vue/runtime-core';
-import { usePricesStore } from '../stores/prices';
+import { computed, onMounted, ref } from '@vue/runtime-core';
+import { useCryptoStore } from '../stores/crypto';
 
-const store =  usePricesStore()
-const preco = computed(() => store.price)
+const store =  useCryptoStore()
+const crypto = computed(() => store.crypto)
+const id = computed(() => store.id)
 
 onMounted(() => {
-  store.consultarPreco('bitcoin')
-})
+  store.checkCrypto()
 
+  setInterval(() => {
+    store.checkCrypto()
+  }, 1000)
+
+})
 </script>
 
 <style>
+.content {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 60px;
+  padding: 30px;
+}
+
+.price {
+  font-size: 50px;
+  padding: 30px;
+}
 
 </style>

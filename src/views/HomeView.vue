@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <div class="row body">
+    <div class="row">
       <div class="col">
         <CryptoCard />
       </div>
@@ -24,7 +24,7 @@ import CryptoList from '../components/CryptoList.vue';
 </script>
 
 <style>
-.body {
+body {
   background-color: #E6E6FA;
 }
 </style>

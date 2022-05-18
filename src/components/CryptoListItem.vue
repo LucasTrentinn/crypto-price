@@ -1,12 +1,11 @@
 <template>
-  <div class="botao">aa</div>
+  
 </template>
 
 <script setup>
+
 </script>
 
 <style>
-.botao {
-  margin: 100px;
-}
+
 </style>
