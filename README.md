@@ -26,6 +26,7 @@ Here is an example of the app open on desktop:
 ![Alt text](/public/images/Full_page.PNG)
 
 And here are examples of the app running on phone size:
+
 ![Alt text](/public/images/Small_page_1.PNG) ![Alt text](/public/images/Small_page_2.PNG)
 
 ### Using it in your local machine
