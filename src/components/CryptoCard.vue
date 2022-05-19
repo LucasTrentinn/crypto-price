@@ -10,12 +10,11 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from '@vue/runtime-core';
+import { computed, onMounted } from '@vue/runtime-core';
 import { useCryptoStore } from '../stores/crypto';
 
 const store =  useCryptoStore()
 const crypto = computed(() => store.crypto)
-const id = computed(() => store.id)
 
 onMounted(() => {
   store.checkCrypto()
@@ -44,5 +43,4 @@ onMounted(() => {
   font-size: 50px;
   padding: 20px;
 }
-
 </style>

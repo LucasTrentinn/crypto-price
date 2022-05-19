@@ -11,17 +11,15 @@
 </template>
 
 <script setup>
-import { computed, onMounted } from "@vue/runtime-core";
+import { computed } from "@vue/runtime-core";
 import { useCryptoStore } from "../stores/crypto";
 
 const store =  useCryptoStore()
 const cryptos = computed(() => store.cryptos)
-const crypto = computed(() => store.crypto)
 
 function scrollTop() {
    document.documentElement.scrollTop = 0;
 }
-
 </script>
 
 <style>

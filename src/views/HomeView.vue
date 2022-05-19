@@ -29,6 +29,7 @@ body {
 }
 
 .body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
   padding-bottom: 60px;
 }
 </style>

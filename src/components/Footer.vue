@@ -19,7 +19,6 @@
 }
 
 .signature {
-  font-family: Georgia, 'Times New Roman', Times, serif;
   color: white;
 }
 </style>
