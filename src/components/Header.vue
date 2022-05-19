@@ -10,7 +10,7 @@
 <style>
 .header {
   background-color: #5D3FD3;
-  height: 100px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,9 +1,8 @@
 <template>
   <div v-if="crypto" class="content">
-    {{date}}
     <h1 class="name"> {{ crypto.name }} ({{crypto.symbol}}) </h1>
     <img :src="crypto.image.large" alt="">
-    <h1 class="price"> {{ crypto.market_data.current_price.brl.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}} </h1>  
+    <h1 class="price"> {{ crypto.market_data.current_price.brl.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}} </h1>
   </div>
   <div v-else>
     <h1>carregando...</h1>
@@ -23,14 +22,13 @@ onMounted(() => {
 
   setInterval(() => {
     store.checkCrypto()
-  }, 1000)
-
+  }, 1000 * 60)
 })
 </script>
 
 <style>
 .content {
-  padding: 50px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,12 +37,12 @@ onMounted(() => {
 
 .name {
   font-size: 60px;
-  padding: 30px;
+  padding: 20px;
 }
 
 .price {
   font-size: 50px;
-  padding: 30px;
+  padding: 20px;
 }
 
 </style>

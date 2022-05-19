@@ -2,8 +2,8 @@
   <div class="list"> 
     <h3> Choose your crypto </h3>
     <div class="list-group">
-      <button class="list-group-item list-group-item-action item"
-      v-for="item in cryptos" :key="item.id" :value="item.id" @click="store.changeID(item.id)">
+      <button class="list-group-item list-group-item-action item "
+      v-for="item in cryptos" :key="item.id" :value="item.id" @click="store.changeID(item.id) && scrollTop()">
         {{item.name}} ({{item.symbol}})
       </button>
     </div>
@@ -18,6 +18,10 @@ const store =  useCryptoStore()
 const cryptos = computed(() => store.cryptos)
 const crypto = computed(() => store.crypto)
 
+function scrollTop() {
+   document.documentElement.scrollTop = 0;
+}
+
 </script>
 
 <style>
@@ -26,17 +30,16 @@ const crypto = computed(() => store.crypto)
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 60px;
 }
 
 .item{
   display: flex;
   justify-content: center;
   width: 200px;
-  background-color: #E6E6FA;
+  background-color: #d6d6f3;
 }
 
-.item:hover {
-  background-color: white;
+.item:hover, .item:focus {
+  background-color: #E6E6FA;
 }
 </style>
