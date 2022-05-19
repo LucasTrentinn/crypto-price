@@ -18,8 +18,15 @@ You'll find it to have only one route. There you can informations about a crypto
 
 Also, at the *Choose your crypto* section is a list of the cryptos you may see informations, simply click any of them and the informations will be automatically atualizated. When changing to another crypto the *Historical Price* section will be automatically atualizated too.
 
-The proposition of this design is to be simple, clean and direct. Any person can use it both on a computer and phone as the page is responsive and works in every size of screen.
+The proposition of this design is to be simple, clean and direct. The colors, fonts and disposition were designed so anyone can easily understand what to do and how to do it. 
 
+As this is a responsive layout you may use it both on PC and Phone:
+
+Here is an example of the app open on desktop:
+![Alt text](/public/images/Full_page.PNG)
+
+And here are examples of the app running on phone size:
+![Alt text](/public/images/Small_page_1.PNG) ![Alt text](/public/images/Small_page_2.PNG)
 
 ### Using it in your local machine
 
