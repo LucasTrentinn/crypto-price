@@ -1,13 +1,15 @@
 <template>
   <div>
     <Header />
-    <div class="row body">
-      <div class="col">
-        <CryptoCard />
-      </div>
-      <div class="col">
-       <CryptoHist />
-       <CryptoList />
+    <div class="container-fluid">
+      <div class="row body">
+        <div class="col">
+          <CryptoCard />
+        </div>
+        <div class="col">
+          <CryptoHist />
+          <CryptoList />
+        </div>
       </div>
     </div>
     <Footer />
@@ -15,21 +17,19 @@
 </template>
 
 <script setup>
-import Header from '../components/Header.vue';
-import Footer from '../components/Footer.vue';
-import CryptoCard from '../components/CryptoCard.vue';
-import CryptoHist from '../components/CryptoHist.vue';
-import CryptoList from '../components/CryptoList.vue';
-
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import CryptoCard from "../components/CryptoCard.vue";
+import CryptoHist from "../components/CryptoHist.vue";
+import CryptoList from "../components/CryptoList.vue";
 </script>
 
 <style>
 body {
-  background-color: #E6E6FA;
+  background-color: #e6e6fa;
 }
 
 .body {
-  font-family:Georgia, 'Times New Roman', Times, serif;
   padding-bottom: 60px;
 }
 </style>
